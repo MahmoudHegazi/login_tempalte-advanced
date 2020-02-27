@@ -1,0 +1,203 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding:  10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-img {
+  /* The image used */
+  background-image: url("img_nature.jpg");
+
+  min-height: 380px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+
+}
+
+/* Add styles to the form container */
+.container1 {
+  margin: 20px;
+  max-width: 320px;
+  padding: 16px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  background-color: initial;
+  color: #6b5447;
+  
+       
+}
+
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+#login {
+    text-align: center;
+   
+    
+}
+
+a {
+      text-decoration: none;
+      color: white;
+}
+
+a:hover {
+  background-color: gray;
+}
+
+
+
+.lol1 {
+ 
+  float: right !important; 
+
+
+}
+
+.lol2 {
+ 
+  float: left !important; 
+
+}
+</style>
+</head>
+<body>
+
+<video autoplay muted loop id="myVideo">
+  <source src="https://www.videvo.net/videvo_files/converted/2013_11/preview/ExplosionandSmoke3Videvo.mov38707.webm" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+<section>
+
+
+
+<div class="bg-img" style="float:center;">
+  <form action="/action_page.php" class="container1">
+    <h1 id="login">Login</h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+<input type="checkbox" name="remember" value="remeber">
+<span style="color:white;"> <b>save</b></span>
+    <button type="submit" class="btn">Login</button>
+    <br>  
+   <a class="lol1" href="#"
+   title="Recover Passwordt"><b>Forget Password</b></a> 
+  <a class="lol2" href="#" title="Create New Account">
+  <b>Sign up</b></a> 
+  </form>
+</div>
+
+
+</section>
+
+<div class="content">
+  <h1><a href="TOP10" title="Make Your Choice">TOP10.net</a></h1>
+  <p>Welcome To the TOP10.net if u wana go to home page 
+  click on this link <strong><a href="#" 
+  title="Go To Home page!">TOP10.net</a></strong></p>
+  <button id="myBtn" onclick="myFunction()"
+  title="Click To Freez background">Pause</button>
+</div>
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+
+</body>
+</html>
+
